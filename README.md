@@ -11,6 +11,41 @@ pushGradStrength = scale / 2f;
 pushStrength = scale / 6f;
 ```
 
+# 快捷使用姿势
+```
+1.
+下载
+(https://github.com/1369521908/Anime4KSharp/releases/tag/0.0.1)
+或者
+克隆源码进行编译
+(https://github.com/1369521908/Anime4KSharp.git)
+
+2.
+进入项目文件夹
+打开命令行输入以下命令
+
+win10 64位 编译命令
+dotnet publish -r win10-x64 /p:PublishSingleFile=true  /p:PublishTrimmed=true
+
+win10 32位 编译命令
+dotnet publish -r win10-x86 /p:PublishSingleFile=true  /p:PublishTrimmed=true
+
+3.
+编译成功后进入
+Anime4KSharp\Anime4KSharp\bin\Debug\netcoreapp3.1\win10-x64\publish\
+
+4.
+在该文件夹输入以下命令(类似Usage)
+Anime4KSharp.exe [input_path] [output_path] [(Optional)scale] [(Optional)push_strength] [(Optional)push_gradient_strength]
+
+input_path=你想转化的图片目录,例如 D:\convert
+output_path=你想输出的目录,例如 D:\convert_out
+(Optional)scale=可选参数,默认2,可输入 1或1.6或2
+(Optional)push_strength=可选参数,推进强度值,默认2,越高线条越细,但消耗时间越长
+(Optional)push_gradient_strength=可选参数,变化梯度
+```
+
+
 # Write-up
 Actually this algorithm is as dead simple as bloc97 described in this [pseudo-preprint](https://github.com/bloc97/Anime4K/blob/master/Preprint.md).
 
